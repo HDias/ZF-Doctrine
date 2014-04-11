@@ -1,4 +1,10 @@
 ZF-Doctrine
 ===========
 
-Applicação ZF2 + DoctrineORMMOdule + ZendDeveloperTools = indexAction Listando dados do DB
+Applicação ZF2 + DoctrineORMMOdule + ZendDeveloperTools 
+-------------------------------------------------------
+
+O que está OK
+-------------
+
+Listando dados do DB
