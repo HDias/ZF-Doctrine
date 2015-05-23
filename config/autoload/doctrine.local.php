@@ -1,17 +1,15 @@
 <?php
-return array(
-		'doctrine' => array(
-				'connection' => array(
-						'orm_default' => array(
-								'driverClass' =>'Doctrine\DBAL\Driver\PDOMySql\Driver',
-								'params' => array(
-										'host'     => 'localhost',
-										'port'     => '3306',
-										'user'     => 'root',
-										'password' => '',
-										'dbname'   => 'nomeDoBanco',
-								)
-						)
-				)
-		)
-);
+return [
+    'doctrine' => [
+        'connection' => [
+            'orm_default' => [
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                'params' => [
+                    'user' => 'root',
+                    'password' => '',
+                    'dbname' => 'zf_doctrine',
+                ]
+            ]
+        ]
+    ]
+];

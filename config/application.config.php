@@ -1,18 +1,24 @@
 <?php
-return array(
-		'modules' => array(
-				'ZendDeveloperTools',
-				'DoctrineModule',
-				'DoctrineORMModule',
-				'Application',	
-		),
-		'module_listener_options' => array(
-				'module_paths' => array(
-						'./module',
-						'./vendor',
-				),
-				'config_glob_paths' => array(
-						'config/autoload/{,*.}{global,local}.php',
-				),
-		),
-);
+return [
+    'modules' => [
+        // Developer Tools
+        'ZendDeveloperTools',
+        'SanSessionToolbar',
+        'ZfSnapEventDebugger',
+        'OcraServiceManager',
+        'Jhu\ZdtLoggerModule',
+
+        'DoctrineModule',
+        'DoctrineORMModule',
+        'Application',
+    ],
+    'module_listener_options' => [
+        'module_paths' => [
+            './module',
+            './vendor',
+        ],
+        'config_glob_paths' => [
+            'config/autoload/{,*.}{global,local}.php',
+        ],
+    ],
+];

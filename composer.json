@@ -4,13 +4,20 @@
     "license": "BSD-3-Clause",
     "keywords": [
         "framework",
-        "zf2"
+        "zf2",
+        "doctrine"
     ],
     "homepage": "http://framework.zend.com/",
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.3.*",
-        "doctrine/doctrine-orm-module": "0.7.*",
-        "zendframework/zend-developer-tools": "dev-master"
+        "zendframework/zendframework": "2.4.*",
+        "doctrine/doctrine-orm-module": "0.*"
+    },
+    "require-dev": {
+        "zendframework/zend-developer-tools": "dev-master",
+        "san/san-session-toolbar": "0.*",
+        "snapshotpl/zf-snap-event-debugger": "1.*",
+        "ocramius/ocra-service-manager": "2.*",
+        "jhuet/zdt-logger-module": "0.*"
     }
 }
