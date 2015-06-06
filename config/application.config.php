@@ -1,17 +1,28 @@
 <?php
-return [
-    'modules' => [
-        // Developer Tools
-        'ZendDeveloperTools',
-        'SanSessionToolbar',
-        'ZfSnapEventDebugger',
-        'OcraServiceManager',
-        'Jhu\ZdtLoggerModule',
 
-        'DoctrineModule',
-        'DoctrineORMModule',
-        'Application',
-    ],
+$env = getenv('APP_ENV');
+
+$prod = [
+    'DoctrineModule',
+    'DoctrineORMModule',
+    'Application'
+];
+$dev = [
+    'ZendDeveloperTools',
+    'SanSessionToolbar',
+    'ZfSnapEventDebugger',
+    'OcraServiceManager',
+    'Jhu\ZdtLoggerModule'
+];
+
+$modules = array_merge($prod, $dev);
+
+if ($env == 'prod') {
+    $modules = $prod;
+}
+
+return [
+    'modules' => $modules,
     'module_listener_options' => [
         'module_paths' => [
             './module',
