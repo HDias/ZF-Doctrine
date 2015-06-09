@@ -9,6 +9,7 @@ use Zend\Mvc\Application;
 chdir(dirname(__DIR__));
 
 define('DEV_ENV', (getenv('APP_ENV') !== 'prod') ? true : false);
+define('ROOT_PATH', dirname(__DIR__));
 
 if (DEV_ENV) {
     ini_set('display_errors', 1);
@@ -32,8 +33,8 @@ try {
     $app->run();
 } catch (\Exception $e) {
     /** @var Logger $logger */
-//    $logger = $app->getServiceManager()->get('Logger');
-//    $logger->crit($e);
+    $logger = $app->getServiceManager()->get('Logger');
+    $logger->crit($e);
     echo 'Houve um erro. Por favor tente mais tarde.';
 
     if (DEV_ENV) {

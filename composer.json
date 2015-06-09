@@ -19,6 +19,6 @@
         "snapshotpl/zf-snap-event-debugger": "1.*",
         "ocramius/ocra-service-manager": "2.*",
         "jhuet/zdt-logger-module": "0.*",
-        "phpunit/phpunit": "4.6.*"
+        "phpunit/phpunit": "4.7.*"
     }
 }
