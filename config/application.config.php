@@ -5,7 +5,8 @@ $env = getenv('APP_ENV');
 $prod = [
     'DoctrineModule',
     'DoctrineORMModule',
-    'Application'
+    'Application',
+    'Base'
 ];
 $dev = [
     'ZendDeveloperTools',

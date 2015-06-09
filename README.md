@@ -15,13 +15,13 @@ Para gerar as tabelas a partir das entities:
 
 ### Apache Setup
 
-To setup apache, setup a virtual host to point to the public/ directory of the
-project and you should be ready to go! It should look something like below:
+Deve ser configurado o virtual host para pasta public/.
+A configuração de ser próxima a exibida abaixo.
 
     <VirtualHost *:80>
         ServerName local.zf2-demo
         DocumentRoot /path/to/zf2-demo/public
-        SetEnv APPLICATION_ENV "prod"                #add this in production
+        SetEnv APP_ENV "prod"                #add this in production
         <Directory /path/to/zf2-demo/public>
             DirectoryIndex index.php
             AllowOverride All
