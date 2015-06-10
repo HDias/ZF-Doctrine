@@ -12,10 +12,3 @@ config/autoload/*.local.php
 # Binary gettext files
 *.mo
 
-# Data
-data/logs/
-data/cache/
-data/sessions/
-data/tmp/
-temp/
-

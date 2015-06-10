@@ -35,7 +35,7 @@ try {
     /** @var Logger $logger */
     $logger = $app->getServiceManager()->get('Logger');
     $logger->crit($e);
-    echo 'Houve um erro. Por favor tente mais tarde.';
+    echo 'Houve um erro! Por favor tente mais tarde.';
 
     if (DEV_ENV) {
         echo PHP_EOL . PHP_EOL;

@@ -32,7 +32,9 @@ A configuração de ser próxima a exibida abaixo.
 
 ##Logs
 
-## Tabela de Prioridades
+###[Tabela de Prioridades] (http://framework.zend.com/manual/current/en/modules/zend.log.overview.html#using-built-in-priorities)
+
+[Class Logger - Metods] (http://framework.zend.com/apidoc/2.0/classes/Zend.Log.Logger.html)
 
     EMERG   = 0;  // Emergency: system is unusable
     ALERT   = 1;  // Alert: action must be taken immediately
@@ -42,3 +44,52 @@ A configuração de ser próxima a exibida abaixo.
     NOTICE  = 5;  // Notice: normal but significant condition
     INFO    = 6;  // Informational: informational messages
     DEBUG   = 7;  // Debug: debug messages
+    
+##Tests
+
+### Estrutura do Projeto
+        application_root/
+            config/
+                application.config.php
+                autoload/
+                    global.php
+                    local.php
+                    // etc.
+            data/
+            module/
+            vendor/
+            public/
+                .htaccess
+                index.php
+            tests/                  * Run all Tests
+                log/                * Todos os dados de cobertura de Testes
+            init_autoloader.php
+
+#### Estrutura do Modulo
+
+        module_root<named-after-module-namespace>/
+            Module.php
+            autoload_classmap.php
+            autoload_function.php
+            autoload_register.php
+            config/
+                module.config.php
+            public/
+                images/
+                css/
+                js/
+            src/
+                <module_namespace>/
+                    <code files>
+            test/                  * Run module tests
+                phpunit.xml
+                bootstrap.php
+                log/               * Dados do Módulo de cobertura de Testes
+                <module_namespace>/
+                    <test code files>
+            view/
+                <dir-named-after-module-namespace>/
+                    <dir-named-after-a-controller>/
+                        <.phtml files>
+
+   
