@@ -68,64 +68,132 @@ class Cliente
      * @ORM\Column(name="dispositivo", type="string", length=255, nullable=true)
      */
     private $dispositivo;
-	
-    /*
-     * Getter
-    */
-    public function getId() {
-    	return $this->id;
-    }
-    public function getNome() {
-    	return $this->nome;
-    }
-    public function getEmail() {
-    	return $this->email;
-    }
-    public function getTelefone() {
-    	return $this->telefone;
-    }
-    public function getSetor() {
-    	return $this->setor;
-    }
-    public function getDatcreate() {
-    	return $this->datcreate;
-    }
-    public function getNavegador() {
-    	return $this->navegador;
-    }
-    public function getDispositivo() {
-    	return $this->dispositivo;
-    }
-    /*
-     * Setter
-    */
-    public function setNome($nome) {
-    	$this->nome = $nome;
-    	return $this;
-    }
-    public function setEmail($email) {
-    	$this->email = $email;
-    	return $this;
-    }
-    public function setTelefone($telefone) {
-    	$this->telefone = $telefone;
-    	return $this;
-    }
-    public function setSetor($setor) {
-    	$this->setor = $setor;
-    	return $this;
-    }
-    public function setDatCreate($dateCreate) {
-    	$this->datCreate = $dateCreate;
-    	return $this;
-    }
-    public function setNavegador($navegador) {
-    	$this->navegador = $navegador;
-    	return $this;
-    }
-    public function setDispositivo($dispositivo) {
-    	$this->dispositivo = $dispositivo;
-    	return $this;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNome()
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @param string $nome
+     */
+    public function setNome($nome)
+    {
+        $this->nome = $nome;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTelefone()
+    {
+        return $this->telefone;
+    }
+
+    /**
+     * @param string $telefone
+     */
+    public function setTelefone($telefone)
+    {
+        $this->telefone = $telefone;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSetor()
+    {
+        return $this->setor;
+    }
+
+    /**
+     * @param string $setor
+     */
+    public function setSetor($setor)
+    {
+        $this->setor = $setor;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDatCreate()
+    {
+        return $this->datCreate;
+    }
+
+    /**
+     * @param \DateTime $datCreate
+     */
+    public function setDatCreate($datCreate)
+    {
+        $this->datCreate = $datCreate;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNavegador()
+    {
+        return $this->navegador;
+    }
+
+    /**
+     * @param string $navegador
+     */
+    public function setNavegador($navegador)
+    {
+        $this->navegador = $navegador;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDispositivo()
+    {
+        return $this->dispositivo;
+    }
+
+    /**
+     * @param string $dispositivo
+     */
+    public function setDispositivo($dispositivo)
+    {
+        $this->dispositivo = $dispositivo;
+    }
 }

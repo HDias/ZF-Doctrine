@@ -47,7 +47,7 @@ A configuração de ser próxima a exibida abaixo.
     
 ##Tests
 
-### Estrutura do Projeto
+#### Estrutura do Projeto
         application_root/
             config/
                 application.config.php
@@ -62,18 +62,18 @@ A configuração de ser próxima a exibida abaixo.
                 .htaccess
                 index.php
             tests/                  * Run all Tests
-                log/                * Todos os dados de cobertura de Testes
+                log/                * Code coverage application
             init_autoloader.php
 
-#### Estrutura do Modulo
+#### Estrutura do Módulo
 
         module_root<named-after-module-namespace>/
             Module.php
-            autoload_classmap.php
-            autoload_function.php
-            autoload_register.php
             config/
                 module.config.php
+            phpcs/                   * Code Sniffer
+                ruleset.xml
+                log/
             public/
                 images/
                 css/
@@ -81,10 +81,10 @@ A configuração de ser próxima a exibida abaixo.
             src/
                 <module_namespace>/
                     <code files>
-            test/                  * Run module tests
+            test/                   * Run module tests
                 phpunit.xml
                 bootstrap.php
-                log/               * Dados do Módulo de cobertura de Testes
+                log/                * Code coverage Module
                 <module_namespace>/
                     <test code files>
             view/
