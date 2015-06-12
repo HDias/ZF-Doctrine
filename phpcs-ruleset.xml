@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <ruleset name="PHP_CodeSniffer">
-        <description>The coding standard for PHP_CodeSniffer itself.</description>
+        <description>PSR2 in our code</description>
 
         <file>module/Application/src/Application</file>
 
@@ -19,6 +19,6 @@
                 <!--<property name="eolChar" value="\r\n"/>-->
             <!--</properties>-->
         <!--</rule>-->
-    
+
         <rule ref="PSR2"/>
 </ruleset>

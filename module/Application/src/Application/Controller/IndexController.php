@@ -4,6 +4,10 @@ namespace Application\Controller;
 use Zend\View\Model\ViewModel;
 use Zend\Mvc\Controller\AbstractActionController;
 
+/**
+ * Class IndexController
+ * @package Application\Controller
+ */
 class IndexController extends AbstractActionController
 {
     public function indexAction()
@@ -13,14 +17,12 @@ class IndexController extends AbstractActionController
             ->findAll();
 
         return new ViewModel(
-            array('home' => $list)
+            ['home' => $list]
         );
     }
 
     private function getEm()
     {
-        $em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
-
-        return $em;
+        return $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
     }
 }

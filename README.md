@@ -48,46 +48,74 @@ A configuração de ser próxima a exibida abaixo.
 ##Tests
 
 #### Estrutura do Projeto
-        application_root/
-            config/
-                application.config.php
-                autoload/
-                    global.php
-                    local.php
-                    // etc.
-            data/
-            module/
-            vendor/
-            public/
-                .htaccess
-                index.php
-            tests/                  * Run all Tests
-                log/                * Code coverage application
-            init_autoloader.php
-            phpcs-ruleset.xml       * Code Sniffer configurations
+    application_root/
+        config/
+            application.config.php
+            autoload/
+                global.php
+                local.php
+                // etc.
+        data/
+        module/
+        vendor/
+        public/
+            .htaccess
+            index.php
+        tests/                  * Run all Tests
+            log/                * Code coverage application
+        init_autoloader.php
+        phpcs-ruleset.xml       * Code Sniffer configurations
 
 #### Estrutura do Módulo
+    module_root<named-after-module-namespace>/
+        Module.php
+        config/
+            module.config.php
+        public/
+            images/
+            css/
+            js/
+        phpcs/                  * Code Sniffer
+            log/   
+        phpmd/                  * Mess Detector
+            log/
+        src/
+            <module_namespace>/
+                <code files>
+        test/                   * Run module tests
+            phpunit.xml
+            bootstrap.php
+            log/                * Code coverage Module
+            <module_namespace>/
+                <test code files>
+        view/
+            <dir-named-after-module-namespace>/
+                <dir-named-after-a-controller>/
+                    <.phtml files>
 
-        module_root<named-after-module-namespace>/
-            Module.php
-            config/
-                module.config.php
-            public/
-                images/
-                css/
-                js/
-            src/
-                <module_namespace>/
-                    <code files>
-            test/                   * Run module tests
-                phpunit.xml
-                bootstrap.php
-                log/                * Code coverage Module
-                <module_namespace>/
-                    <test code files>
-            view/
-                <dir-named-after-module-namespace>/
-                    <dir-named-after-a-controller>/
-                        <.phtml files>
+## CodeSniffer
 
-   
+[Example xml] (https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml)
+    
+Deve ser adicionado o caminho para os arquivos a serem verificado em phpcs.ruleset.xml:
+    
+    [...]
+    <file>./path/</file>
+    [...]
+
+Arquivos exlcuídos da verificação
+    
+    [...]
+    <exclude-pattern>./path</exclude-pattern>
+    [...]
+        
+Run verification
+
+    vendor/bin/phpcs --standard=phpcs-ruleset.xml    
+    
+## Mess Detector
+
+[Rules](http://phpmd.org/rules/index.html)
+
+    vendor/bin/phpmd <path_to_code>  xml cleancode,codesize,controversial,design,unusedcode,codesize --reportfile <module_path>/phpmd/log/phpmd.xml
+

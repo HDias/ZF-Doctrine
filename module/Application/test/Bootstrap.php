@@ -1,4 +1,5 @@
 <?php
+
 namespace ApplicationTest;
 
 use RuntimeException;
@@ -14,6 +15,7 @@ class Bootstrap
     protected static $serviceManager;
     public static function init()
     {
+        /** @noinspection PhpTraditionalSyntaxArrayLiteralInspection */
         $zf2ModulePaths = array(
             dirname(dirname(__DIR__))
         );

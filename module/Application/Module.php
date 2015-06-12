@@ -13,6 +13,10 @@ use Zend\ModuleManager\Feature\ServiceProviderInterface;
 use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
 use Zend\Mvc\ModuleRouteListener;
 
+/**
+ * Class Module
+ * @package Application
+ */
 class Module implements
     BootstrapListenerInterface,
     ConfigProviderInterface,
