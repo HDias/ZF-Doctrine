@@ -47,6 +47,10 @@ A configuração de ser próxima a exibida abaixo.
     
 ##Tests
 
+Run tests
+
+    phpunit ./path_to_folder_phpunit.xml
+
 #### Estrutura do Projeto
     application_root/
         config/
