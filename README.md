@@ -64,6 +64,7 @@ A configuração de ser próxima a exibida abaixo.
             tests/                  * Run all Tests
                 log/                * Code coverage application
             init_autoloader.php
+            phpcs-ruleset.xml       * Code Sniffer configurations
 
 #### Estrutura do Módulo
 
@@ -71,9 +72,6 @@ A configuração de ser próxima a exibida abaixo.
             Module.php
             config/
                 module.config.php
-            phpcs/                   * Code Sniffer
-                ruleset.xml
-                log/
             public/
                 images/
                 css/

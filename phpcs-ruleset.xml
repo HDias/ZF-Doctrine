@@ -2,7 +2,9 @@
     <ruleset name="PHP_CodeSniffer">
         <description>The coding standard for PHP_CodeSniffer itself.</description>
 
-        <exclude-pattern>../test</exclude-pattern>
+        <file>module/Application/src/Application</file>
+
+        <exclude-pattern>module/Application/test</exclude-pattern>
 
         <arg name="report" value="full"/>
         <arg value="np"/>
@@ -12,10 +14,11 @@
         to specify the end of line character that your standard
         should check for.
         -->
-        <!-- <rule ref="Generic.Files.LineEndings">
-            <properties>
-                <property name="eolChar" value="\r\n"/>
-            </properties>
-        </rule> -->
+        <!--<rule ref="Generic.Files.LineEndings">-->
+            <!--<properties>-->
+                <!--<property name="eolChar" value="\r\n"/>-->
+            <!--</properties>-->
+        <!--</rule>-->
+    
         <rule ref="PSR2"/>
 </ruleset>
